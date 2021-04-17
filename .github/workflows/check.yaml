@@ -31,7 +31,16 @@ jobs:
         run: |
           R -e 'install.packages("renv")'
           R -e 'renv::restore()'
+          R -e 'renv::install("lintr")'
 
       - name: Run tests
         run: |
           Rscript tests/run_tests.R
+
+      - name: Lint tests
+        run: lintr::lint_dir("tests")
+        shell: Rscript {0}
+
+      - name: Lint R
+        run: lintr::lint_dir("R")
+        shell: Rscript {0}
