@@ -2,8 +2,7 @@ FROM r-base:4.0.5
 
 ARG USERNAME=apprunner
 
-ENV USER_HOME=/home/$USERNAME \
-    RENV_VERSION=0.13.2
+ENV USER_HOME=/home/$USERNAME
 
 RUN set -xe \
     && apt-get update \
