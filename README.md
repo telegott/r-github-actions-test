@@ -1,2 +1,2 @@
 # r-github-actions-test
-Experiment with R CI
+Experiment with Github actions for automated R testing and linting.
