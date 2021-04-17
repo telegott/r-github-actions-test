@@ -20,6 +20,10 @@ jobs:
       - name: Setup R
         uses: r-lib/actions/setup-r@v1
 
+      - name: Install linux libraries
+        run: |
+          sudo apt-get install -yqq libcurl
+
       - name: Cache Renv packages
         uses: actions/cache@v2
         with:
