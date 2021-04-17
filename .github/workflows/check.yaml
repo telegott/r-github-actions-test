@@ -22,7 +22,7 @@ jobs:
 
       - name: Install linux libraries
         run: |
-          sudo apt-get install -yqq libcurl
+          sudo apt-get install -yqq --no-install-recommends libcurl4-openssl-dev libssl-dev libxml2-dev
 
       - name: Cache Renv packages
         uses: actions/cache@v2
