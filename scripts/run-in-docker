@@ -1,0 +1,3 @@
+#!/bin/bash -e
+
+Rscript tests/run_tests.R

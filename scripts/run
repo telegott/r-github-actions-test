@@ -1,0 +1,12 @@
+#!/bin/bash -e
+
+CONTAINER_TAG=r-github-actions-test-local
+
+docker build \
+  --tag $CONTAINER_TAG \
+  -f Dockerfile \
+  .
+
+docker run \
+  $CONTAINER_TAG \
+  scripts/run-in-docker
