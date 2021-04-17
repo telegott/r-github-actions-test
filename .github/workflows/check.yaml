@@ -3,8 +3,10 @@ on:
     branches:
       - main
       - master
+  pull_request:
+    types: [ assigned, opened, synchronize, reopened ]
 
-name: blogdown
+name: test
 
 jobs:
   build:
@@ -30,6 +32,6 @@ jobs:
           R -e 'install.packages("renv")'
           R -e 'renv::restore()'
 
-      - name: Build site
+      - name: Run tests
         run: |
           Rscript tests/run_tests.R
