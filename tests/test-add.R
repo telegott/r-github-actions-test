@@ -1,4 +1,3 @@
-options(box.path = here::here())
 box::use(R / add[add])
 
 test_that("adds 3", {

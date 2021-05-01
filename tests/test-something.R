@@ -1,5 +1,3 @@
-test_that("th
-e test passes", {
-  expect_equal(
-    3, 3)
+test_that("the test passes", {
+  expect_equal(3, 3)
 })

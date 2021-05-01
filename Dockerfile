@@ -14,6 +14,6 @@ WORKDIR $USER_HOME
 USER $USER_NAME
 COPY --chown=$USER_NAME renv.lock renv.lock
 
-RUN R -e 'renv::restore()'
+RUN R -e 'renv::consent(TRUE); renv::restore()'
 COPY . .
 

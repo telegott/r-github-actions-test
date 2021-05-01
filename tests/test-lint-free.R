@@ -6,7 +6,7 @@ expect_lint_free <- function(directory) {
   if (has_lints) {
     lint_output <- paste(collapse = "\n", capture.output(print(lints)))
   }
-  testthat::expect(!has_lints, paste(sep = "\n", "lintr frailed", lint_output))
+  testthat::expect(!has_lints, paste(sep = "\n", "lintr failed", lint_output))
 }
 
 test_that("R/ is lint free", {
