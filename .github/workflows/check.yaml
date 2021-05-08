@@ -34,7 +34,7 @@ jobs:
       - name: Install packages
         run: |
           R -e 'install.packages("renv")'
-          R -e 'renv::restore()'
+          R -e 'renv::restore(repos="https://packagemanager.rstudio.com/cran/__linux__/focal/2021-04-23")'
 
       - name: Run tests
         run: |
