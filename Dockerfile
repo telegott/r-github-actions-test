@@ -13,6 +13,8 @@ RUN set -xe \
 WORKDIR $USER_HOME
 USER $USER_NAME
 COPY --chown=$USER_NAME renv.lock renv.lock
+COPY --chown=$USER_NAME renv/activate.R renv/activate.R
+COPY --chown=$USER_NAME .Rprofile .Rprofile
 
 RUN R -e 'renv::consent(TRUE); renv::restore()'
 COPY . .
